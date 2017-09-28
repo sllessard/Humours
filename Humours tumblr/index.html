@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <head>
+        <title>{Title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+	<meta charset="UTF-8">
+        <link rel="shortcut icon" href="{Favicon}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <style>
+            {CustomCSS}
+        </style>
+        <script>
+            function resizePhotosets(){
+    var parentWidth = document.body.querySelector('.html_photoset').offsetWidth; 
+    var photosets = document.body.querySelectorAll('iframe.photoset');
+    for(var i = 0; i < photosets.length; ++i){
+        var photoset = photosets[i];
+        photoset.width = parentWidth;
+    }   
+}
+window.onload = resizePhotosets;
+window.onresize = resizePhotosets;
+        </script>
+    </head>
+    <body>
+    <div class="page-wrap">
+        <header>
+        <a href="http://nxunu.tumblr.com"><img src="http://static.tumblr.com/lcd8heo/YdTnr7bld/x.png"></a>
+            <nav>
+                <a href="http://www.nxu.nu">nxu.nu</a>
+                <a href="http://nxunu.tumblr.com/about">About</a>
+                <a href="http://nxunu.tumblr.com/ask">Ask</a>
+            </nav>
+        </header>
+        <ol id="posts">
+            {block:Posts}
+                {block:Text}
+                    <li class="post text">
+                    {block:Title}
+                        <h1><a href="{Permalink}">{Title}</a></h1>
+                    {/block:Title}{Body}
+                    </li>
+	            <div class="mainDivider__wrap">
+	  	        <div class="mainDivider"></div>
+	  	        </div>
+                {/block:Text}
+                {block:Photo}
+                    <li class="post photo">
+                        <a href="{permalink}"><img src="{PhotoURL-Highres}" alt="{PhotoAlt}"/></a>
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                <div class="mainDivider__wrap">
+	  	        <div class="mainDivider"></div>
+	  	        </div>
+                {/block:Photo}
+                {block:Photoset}
+                    <li class="post photoset">
+                        {Photoset}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                <div class="mainDivider__wrap">
+	  	        <div class="mainDivider"></div>
+	  	        </div>
+                {/block:Photoset}
+                {block:Video}
+                    <li class="post video">
+                        {Video}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                <div class="mainDivider__wrap">
+	  	        <div class="mainDivider"></div>
+	  	        </div>
+                {/block:Video}
+                {block:Answer}
+                    <div class="question">
+                        <div class="asker">{Asker}</div>
+                        <div class="asker-question">{Question}</div>
+                    </div>
+                    {block:Answerer}
+                        <div class="answer">
+                            <div class="answerer">{Answerer}</div>
+                            <div class="answerer-answer">{Answer}</div>
+                            <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+                        </div>
+                    {/block:Answerer}
+                        <div class="replies">
+                            {Replies}
+                        </div>
+                        <div class="mainDivider__wrap">
+	  	                <div class="mainDivider"></div>
+	  	                </div>
+                {/block:Answer}
+                {block:PostNotes}
+                    <div class="notesWrap">
+                        {PostNotes}
+                    </div>
+                {/block:PostNotes}
+            {/block:Posts}
+        </ol>
+        </div>
+    <footer>
+        <div class="footer__content">
+            <p> 072842 / 07232015 / 1.0 / © 2015 <a href="#">Humours</a> / <a href="mailto:#">foo@Humours.bar</a> </p>
+        </div>
+    </footer>
+    </body>
+</html>
