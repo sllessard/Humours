@@ -5,8 +5,8 @@ body, article, head, section, p, img, form, input, div, span{
 }
 
 @font-face {
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
@@ -17,7 +17,7 @@ body {
   min-height: 100%;
   font-family: 'neutral-regular', sans-serif;}
 
-/*Links*/
+  /*Links*/
   a, a:visited {
     color: rgba(127,127,127, 1);
     text-decoration: none;
@@ -27,102 +27,91 @@ body {
     color: rgba(50,50,50,1);
   }
 
-.section__cntrContentAlgn {
- 	position: relative;
- 	display: block;
- 	top: 50%;
- 	-ms-transform: translateY(-50%);
- 	-webkit-transform: translateY(-50%);
- 	transform: translateY(-50%);
- 	width: 85vw;
- 	max-width: 492px;
-  height: auto;
- 	margin: auto;
- }
+  .section__cntrContentAlgn {
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 85vw;
+    max-width: 492px;
+    height: auto;
+    margin: auto;
+  }
 
-section {
-  position: relative;
-	width: 100%;
- 	height: calc(100vh - 16px);
-}
+  section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 16px);
+  }
 
-p {
-	color: rgba(127,127,127,1);
-	font-size: 16px;
-	line-height: 32px;
-}
+  p {
+    color: rgba(127,127,127,1);
+    font-size: 16px;
+    line-height: 32px;
+  }
 
-section p+p {
-	margin-top: 32px;
-}
+  section p+p {
+    margin-top: 32px;
+  }
 
-.firstWord {
-	color: rgba(50,50,50, 1);
-}
+  .firstWord {
+    color: rgba(50,50,50, 1);
+  }
 
-.top {
-	background: rgba(50,50,50,1) url("../assets/images/bg.jpg") no-repeat center center;
-	background-size: cover;
-}
+  .top {
+    background: rgba(50,50,50,1) url("../assets/images/bg.jpg") no-repeat center center;
+    background-size: cover;
+  }
 
-.bottom--color {
-	background-color: rgba(230,230,230,1);
-}
+  .bottom--color {
+    background-color: rgba(230,230,230,1);
+  }
 
-.bottom__content {
-  position: relative;
-  top: -16px;
-  opacity: 0;
-  max-height: calc(100vh - 64px);
-}
+  .bottom__content {
+    position: relative;
+    top: -16px;
+    opacity: 0;
+    max-height: calc(100vh - 64px);
+  }
 
-.bottom__wrap{
-  display: block;
-  overflow-y: visible;
-  max-height: calc(100vh - 64px);
-}
+  .bottom__wrap{
+    display: block;
+    overflow-y: visible;
+    max-height: calc(100vh - 64px);
+  }
 
- form {
-  display: inline-flex;
-  display: -webkit-inline-flex;
- 	margin-top: 72px;
- 	border-top: 4px solid rgba(127,127,127,.25);
- 	width: 100%;
- }
- 
- form input {
- 	font-size: 32px;
- 	padding: 24px 0 0 0;
- 	color: rgba(127,127,127,.25);
-  text-decoration: none;
- }
- 
- form input[type="email"] {
- 	width: 93%;
- }
- 
+  form {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    margin-top: 72px;
+    border-top: 4px solid rgba(127,127,127,.25);
+    width: 100%;
+  }
+  
+  form input {
+    font-size: 32px;
+    padding: 24px 0 0 0;
+    color: rgba(127,127,127,.25);
+    text-decoration: none;
+  }
+  
+  form input[type="email"] {
+    width: 93%;
+  }
+  
   form input[type="submit"] {
- 	width: 7%;
-  font-size: 40px;
-  text-align: right;
- }
- 
-@-webkit-keyframes shake{
+    width: 7%;
+    font-size: 40px;
+    text-align: right;
+  }
+  
+  @-webkit-keyframes shake{
    0% {left: -5px;}
    50% {left: 5px;}
    100% {left: 0;}
  }
-@-moz-keyframes shake{
-   0% {left: -5px;}
-   50% {left: 5px;}
-   100% {left: 0;}
- }
-@-o-keyframes shake{
-   0% {left: -5px;}
-   50% {left: 5px;}
-   100% {left: 0;}
- }
-@keyframes shake{
+ @keyframes shake{
    0% {left: -5px;}
    50% {left: 5px;}
    100% {left: 0;}
@@ -130,28 +119,24 @@ section p+p {
  
  .shake {
   -webkit-animation-name: shake;
-  -moz-animation-name: shake;
-  -o-animation-name: shake;
   animation-name: shake;
   -webkit-animation-duration: .5s;
-  -moz-animation-duration: .5s;
-  -o-animation-duration: .5s;
   animation-duration: .5s;
   position: relative;
- }
+}
 
 form input:focus{
-   outline: none;
- }
- 
+ outline: none;
+}
+
 :-webkit-input-placeholder {
-   color: rgba(127,127,125, .25);
+ color: rgba(127,127,125, .25);
 }
 :-moz-placeholder { 
-   color: rgba(127,127,125, .25);
+ color: rgba(127,127,125, .25);
 }
 :-ms-input-placeholder {
-   color: rgba(127,127,125, .25);
+ color: rgba(127,127,125, .25);
 }
 
 .form__active {
@@ -195,7 +180,7 @@ footer p {
     overflow-y: scroll;
   }
 
-   footer p {
+  footer p {
     font-size: 8px;
   }
 
@@ -203,12 +188,12 @@ footer p {
 
 @media only screen and (max-height: 567px){
   
-p {
-  font-size: 14px;
-  line-height: 28px;
-}
-.bottom__wrap{
-  overflow: auto;
-}
+  p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .bottom__wrap{
+    overflow: auto;
+  }
 
 }
